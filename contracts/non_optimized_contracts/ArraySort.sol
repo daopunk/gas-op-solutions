@@ -6,14 +6,14 @@ contract ArraySort {
         uint256 dataLen = data.length;
 
         // Create 'working' copy
-        uint[] memory _data = new uint256[](dataLen);
+        uint256[] memory _data = new uint256[](dataLen);
         for (uint256 k = 0; k < _data.length; k++) {
             _data[k] = data[k];
         }
 
         for (uint256 i = 0; i < _data.length; i++) {
-            for (uint256 j = i+1; j < _data.length; j++) {
-                if(_data[i] > _data[j]){
+            for (uint256 j = i + 1; j < _data.length; j++) {
+                if (_data[i] > _data[j]) {
                     uint256 temp = _data[i];
                     _data[i] = _data[j];
                     _data[j] = temp;

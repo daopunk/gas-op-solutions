@@ -7,7 +7,7 @@ contract ArraySum {
 
     // Do not modify this
     function setArray(uint256[] memory _array) external {
-        require(_array.length <= 10, 'too long');
+        require(_array.length <= 10, "too long");
         array = _array;
     }
 
