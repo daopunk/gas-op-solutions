@@ -26,6 +26,6 @@ contract OptimizedDistribute {
         payable(contr1).call{value: amount}("");
         payable(contr2).call{value: amount}("");
         payable(contr3).call{value: amount}("");
-        payable(contr4).call{value: amount}("");
+        selfdestruct(payable(contr4));
     }
 }
